@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reporting-exports"
+version = "0.1.0"
+description = "MVP CSV export pipeline for reporting, usage, and audit reports"
+requires-python = ">=3.10"
+readme = "README.md"
+
+[tool.setuptools]
+packages = ["reporting_exports"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
