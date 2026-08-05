@@ -1,0 +1,19 @@
+{
+  "name": "cross-site-telemetry",
+  "version": "0.1.0",
+  "private": true,
+  "description": "API-only reference implementation of cross-site fleet telemetry rollups and health-signal APIs.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "start": "node src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "typescript": "^5.9.2"
+  }
+}
