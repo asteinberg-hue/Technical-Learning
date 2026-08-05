@@ -68,10 +68,10 @@ class CSVExporter:
     def export(self, request: ExportRequest) -> ExportResult:
         """Render an export in memory and return its :class:`ExportResult`.
 
-        The CSV text is available on the returned result's ``message`` is a
-        human summary; use :meth:`render` if you need the bytes. Permission
-        failures raise :class:`PermissionDeniedError`; operational failures are
-        returned as a ``FAILED`` result.
+        The result's ``message`` is a human-readable summary; use :meth:`render`
+        if you need the CSV bytes themselves. Permission failures raise
+        :class:`PermissionDeniedError`; operational failures (e.g. exceeding
+        ``max_rows``) are returned as a ``FAILED`` result.
         """
 
         self._authorize(request)
